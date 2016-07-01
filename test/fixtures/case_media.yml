@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  case_id: 
+  mediatype_id: 
+  mediacode: MyString
+  has_attachment: 
+
+two:
+  case_id: 
+  mediatype_id: 
+  mediacode: MyString
+  has_attachment: 

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Case:</strong>
+  <%= @case_doctor.case %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @case_doctor.doctor %>
+</p>
+
+<%= link_to 'Edit', edit_case_doctor_path(@case_doctor) %> |
+<%= link_to 'Back', case_doctors_path %>

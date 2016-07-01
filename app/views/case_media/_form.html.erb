@@ -1,0 +1,33 @@
+<%= form_for(@case_medium) do |f| %>
+  <% if @case_medium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@case_medium.errors.count, "error") %> prohibited this case_medium from being saved:</h2>
+
+      <ul>
+      <% @case_medium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :case_id %><br>
+    <%= f.text_field :case_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mediatype_id %><br>
+    <%= f.text_field :mediatype_id %>
+  </div>
+  <div class="field">
+    <%= f.label :mediacode %><br>
+    <%= f.text_field :mediacode %>
+  </div>
+  <div class="field">
+    <%= f.label :has_attachment %><br>
+    <%= f.text_field :has_attachment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

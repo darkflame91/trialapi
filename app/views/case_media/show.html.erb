@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Case:</strong>
+  <%= @case_medium.case %>
+</p>
+
+<p>
+  <strong>Mediatype:</strong>
+  <%= @case_medium.mediatype %>
+</p>
+
+<p>
+  <strong>Mediacode:</strong>
+  <%= @case_medium.mediacode %>
+</p>
+
+<p>
+  <strong>Has attachment:</strong>
+  <%= @case_medium.has_attachment %>
+</p>
+
+<%= link_to 'Edit', edit_case_medium_path(@case_medium) %> |
+<%= link_to 'Back', case_media_path %>

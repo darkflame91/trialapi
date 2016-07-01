@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Case Media</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Case</th>
+      <th>Mediatype</th>
+      <th>Mediacode</th>
+      <th>Has attachment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @case_media.each do |case_medium| %>
+      <tr>
+        <td><%= case_medium.case %></td>
+        <td><%= case_medium.mediatype %></td>
+        <td><%= case_medium.mediacode %></td>
+        <td><%= case_medium.has_attachment %></td>
+        <td><%= link_to 'Show', case_medium %></td>
+        <td><%= link_to 'Edit', edit_case_medium_path(case_medium) %></td>
+        <td><%= link_to 'Destroy', case_medium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Case medium', new_case_medium_path %>
