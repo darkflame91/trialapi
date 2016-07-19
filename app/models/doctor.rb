@@ -1,4 +1,4 @@
 class Doctor < ActiveRecord::Base
   belongs_to :user
-  belongs_to :specialization
+  has_one :specialization
 end

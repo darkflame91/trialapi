@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20160701151749) do
 
   create_table "case_media", force: :cascade do |t|
     t.integer  "case_id"
-    t.integer  "mediatype_id"
+    t.integer  "media_type_id"
     t.string   "mediacode"
     t.string   "media_file_name"
     t.string   "media_content_type"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20160701151749) do
   end
 
   add_index "case_media", ["case_id"], name: "index_case_media_on_case_id"
-  add_index "case_media", ["mediatype_id"], name: "index_case_media_on_mediatype_id"
+  add_index "case_media", ["media_type_id"], name: "index_case_media_on_media_type_id"
 
   create_table "cases", force: :cascade do |t|
     t.string   "casecode"
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20160701151749) do
   add_index "doctors", ["user_id"], name: "index_doctors_on_user_id"
 
   create_table "media_types", force: :cascade do |t|
-    t.string   "type"
+    t.string   "type_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20160701151749) do
   add_index "patients", ["user_id"], name: "index_patients_on_user_id"
 
   create_table "specializations", force: :cascade do |t|
-    t.string   "type"
+    t.string   "type_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20160701151749) do
     t.string   "email"
     t.string   "phone"
     t.string   "password_digest"
+    t.date     "dob"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
